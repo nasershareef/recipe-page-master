@@ -1,0 +1,151 @@
+html {box-sizing: border-box;}
+*,*::before,*::after {box-sizing: inherit;}
+*{margin: 0;padding: 0;}
+img{width: 100%; height: auto;}
+body {margin: 2rem;}
+
+:root {
+    --p-info-color:#4F4F4F;
+}
+
+.max-width { max-width: 800px;}
+
+.margin-auto { margin: auto;}
+
+.margin-T-B {margin: 1rem 0;}
+
+.padding { padding: 1rem;}
+
+.max-width-650 {max-width: 600px;}
+
+
+/* heading */
+.hero-text {
+    letter-spacing: 1.5px;
+}
+
+.hero-info {
+    max-width: 500px;
+    font-family: 'Montserrat', sans-serif;
+    line-height: 1rem;
+    font-size: .75rem;
+    color: var(--p-info-color);
+}
+
+/* Ingredients */
+#ingredients{
+    display: grid;
+    grid-template-areas: 
+    'GCC        time'
+    'cheesecake time';
+}
+
+#ingredients>h2{
+    font-family: 'Montserrat', sans-serif;
+}
+
+
+span{
+    color: black;
+    font-weight: bolder;
+}
+
+h2 {
+    font-family: 'Playfair Display', serif;
+}
+
+h3 {
+    font-style: italic;
+    font-size: 1.125rem;
+    font-family: 'Playfair Display', serif;
+}
+
+.ch-p-box {
+    display: flex;
+    margin-bottom: 1rem;
+}
+
+.ing-p {
+    text-align: left;
+    margin-left: .5rem;
+    font-size: 1rem;
+    font-weight: 400;
+    color: var(--p-info-color);
+    font-family: 'Montserrat', sans-serif;
+}
+
+.CH-box {
+    align-self: flex-start;
+}
+
+/* time */
+#time {
+    grid-area: time;
+
+    min-width: 200px;
+    max-height: 300px;
+    border-radius: 1rem;
+    display: grid;
+    grid-template-areas: 
+    'Yields'
+    'Prep-TIme'
+    'Cook-Time'
+    'Total-Time';
+    box-shadow: 5px 5px 15px 5px #4F4F4F;
+}
+
+.time-card {
+    margin: 1rem;
+}
+.time-card>p{
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 500;
+}
+.time-card>p:nth-child(1) {color: rgba(0, 0, 0, 0.3); margin-bottom: .2rem;}
+.time-card>p:nth-child(2) {color: black;}
+
+.time-card:nth-child(1){grid-area: Yields;}
+.time-card:nth-child(2){grid-area: Prep-TIme;}
+.time-card:nth-child(3){grid-area: Cook-Time;}
+.time-card:nth-child(4){grid-area: Total-Time;}
+
+/* Instructions */
+#instruc {
+    color: var(--p-info-color);
+    font-family: 'Montserrat', sans-serif;
+}
+.num {
+    color: white;
+    display: grid;
+    align-self: start;
+    font-family: 'Playfair Display', serif;
+    margin-right: 1rem;
+    padding: .2rem .6rem;
+    background-color: #F2994A;
+    border-radius: .2rem;
+}
+
+@media (max-width: 733px) {
+    #ingredients {
+        grid-template-areas: 
+        'time      '
+        'GCC       '
+        'cheesecake';
+    }
+
+    #time {
+        grid-template-areas: 
+        'Yields    Yields    Yields    '
+        'Prep-TIme Cook-Time Total-Time';
+    }
+}
+
+@media (max-width: 377px) {
+    #time {
+        grid-template-areas: 
+        'Yields'
+        'Prep-TIme'
+        'Cook-Time'
+        'Total-Time';
+    }
+}
